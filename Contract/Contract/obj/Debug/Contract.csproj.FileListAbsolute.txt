@@ -1,0 +1,5 @@
+E:\MVC\Contract\Contract\obj\Debug\Contract.csprojResolveAssemblyReference.cache
+E:\MVC\Contract\Contract\bin\Debug\Contract.dll
+E:\MVC\Contract\Contract\bin\Debug\Contract.pdb
+E:\MVC\Contract\Contract\obj\Debug\Contract.dll
+E:\MVC\Contract\Contract\obj\Debug\Contract.pdb

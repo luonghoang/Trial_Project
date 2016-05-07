@@ -1,0 +1,6 @@
+E:\MVC\TrialServiceWeb\TrialServiceWeb\bin\TrialServiceWeb.dll.config
+E:\MVC\TrialServiceWeb\TrialServiceWeb\bin\TrialServiceWeb.dll
+E:\MVC\TrialServiceWeb\TrialServiceWeb\bin\TrialServiceWeb.pdb
+E:\MVC\TrialServiceWeb\TrialServiceWeb\obj\Debug\TrialServiceWeb.csprojResolveAssemblyReference.cache
+E:\MVC\TrialServiceWeb\TrialServiceWeb\obj\Debug\TrialServiceWeb.dll
+E:\MVC\TrialServiceWeb\TrialServiceWeb\obj\Debug\TrialServiceWeb.pdb
