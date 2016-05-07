@@ -3,3 +3,17 @@ E:\MVC\Contract\Contract\bin\Debug\Contract.dll
 E:\MVC\Contract\Contract\bin\Debug\Contract.pdb
 E:\MVC\Contract\Contract\obj\Debug\Contract.dll
 E:\MVC\Contract\Contract\obj\Debug\Contract.pdb
+E:\Git\Trial_Project\Contract\Contract\obj\Debug\Contract.csprojResolveAssemblyReference.cache
+E:\Git\Trial_Project\Contract\Contract\obj\Debug\Contract.dll
+E:\Git\Trial_Project\Contract\Contract\obj\Debug\Contract.pdb
+E:\Git\Trial_Project\Contract\Contract\bin\Debug\Contract.dll
+E:\Git\Trial_Project\Contract\Contract\bin\Debug\Contract.pdb
+E:\Git\Trial_Project\Contract\Contract\bin\Debug\Contract.dll.config
+E:\Git\Trial_Project\Contract\Contract\bin\Debug\EntityFramework.dll
+E:\Git\Trial_Project\Contract\Contract\bin\Debug\EntityFramework.SqlServer.dll
+E:\Git\Trial_Project\Contract\Contract\bin\Debug\EntityFramework.xml
+E:\Git\Trial_Project\Contract\Contract\bin\Debug\EntityFramework.SqlServer.xml
+E:\Git\Trial_Project\Contract\Contract\bin\Debug\SoftwareIsHardwork.Core.dll
+E:\Git\Trial_Project\Contract\Contract\bin\Debug\SoftwareIsHardwork.DataSourceFascade.dll
+E:\Git\Trial_Project\Contract\Contract\bin\Debug\SoftwareIsHardwork.ServiceModelClient.dll
+E:\Git\Trial_Project\Contract\Contract\bin\Debug\SoftwareIsHardwork.TestingExtensions.dll

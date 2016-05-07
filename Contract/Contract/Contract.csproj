@@ -30,7 +30,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="SoftwareIsHardwork.Core">
+      <HintPath>..\Libraries\SoftwareIsHardwork.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SoftwareIsHardwork.DataSourceFascade">
+      <HintPath>..\Libraries\SoftwareIsHardwork.DataSourceFascade.dll</HintPath>
+    </Reference>
+    <Reference Include="SoftwareIsHardwork.ServiceModelClient">
+      <HintPath>..\Libraries\SoftwareIsHardwork.ServiceModelClient.dll</HintPath>
+    </Reference>
+    <Reference Include="SoftwareIsHardwork.TestingExtensions">
+      <HintPath>..\Libraries\SoftwareIsHardwork.TestingExtensions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
@@ -45,12 +64,21 @@
     <Compile Include="Account\Request\GetUserRequest.cs" />
     <Compile Include="Account\Response\GetUserResponse.cs" />
     <Compile Include="Account\Response\ResponseStatus.cs" />
+    <Compile Include="IRetrieveRequest.cs" />
+    <Compile Include="IRetrieveResponse.cs" />
     <Compile Include="ITrialService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider\ProviderBase.cs" />
+    <Compile Include="Provider\ServiceProviderBase.cs" />
+    <Compile Include="Repository.cs" />
     <Compile Include="ServiceBases.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Estimation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

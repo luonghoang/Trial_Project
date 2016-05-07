@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Contract.Account.Response
 {
     [DataContract(Namespace = "http://Trial/GetUserResponse")]
-    public class GetUserResponse
+    public class GetUserResponse : IRetrieveResponse<UserRecord>
     {
         [DataMember(Name = "Status", Order = 1, IsRequired = true)]
         public ResponseStatus Status { get; set; }

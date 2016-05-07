@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Contract.Account.Request
 {
      [DataContract(Namespace = "http://Trial/GetUserRequest")]
-    public class GetUserRequest
+    public class GetUserRequest : IRetrieveRequest
     {
 
         [DataMember(Name = "User_Pass", Order = 1, IsRequired = true)]
@@ -16,5 +16,7 @@ namespace Contract.Account.Request
 
         [DataMember(Name = "User_Name", Order = 1, IsRequired = true)]
         public string User_Name { get; set; }
+
+      
     }
 }

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Contract
-{z
+{
     public abstract class ServiceBases<TRequest, TResponse>
         where TRequest : IRequest
         where TResponse : IResponse, new()
@@ -73,8 +73,6 @@ namespace Contract
     }
     public interface IProviderFactoryBase
     {
-        int CacheDuration { get; }
-        bool ShouldCache { get; }
     }
 
 }

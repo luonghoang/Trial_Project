@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TrialModelStoreContainer" CdmEntityContainer="TrialEntities">
+    <EntitySetMapping Name="M_Meisho">
+      <EntityTypeMapping TypeName="TrialModel.M_Meisho">
+        <MappingFragment StoreEntitySet="M_Meisho">
+          <ScalarProperty Name="Meisho_Kbn" ColumnName="Meisho_Kbn" />
+          <ScalarProperty Name="Meisho_Cd" ColumnName="Meisho_Cd" />
+          <ScalarProperty Name="Meisho" ColumnName="Meisho" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Shohin">
+      <EntityTypeMapping TypeName="TrialModel.M_Shohin">
+        <MappingFragment StoreEntitySet="M_Shohin">
+          <ScalarProperty Name="Shohin_Cd" ColumnName="Shohin_Cd" />
+          <ScalarProperty Name="Shohin_Name" ColumnName="Shohin_Name" />
+          <ScalarProperty Name="Tani" ColumnName="Tani" />
+          <ScalarProperty Name="Tanka" ColumnName="Tanka" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Tokui">
+      <EntityTypeMapping TypeName="TrialModel.M_Tokui">
+        <MappingFragment StoreEntitySet="M_Tokui">
+          <ScalarProperty Name="Tokui_Cd" ColumnName="Tokui_Cd" />
+          <ScalarProperty Name="Tokui_Name" ColumnName="Tokui_Name" />
+          <ScalarProperty Name="Tantosha_Cd" ColumnName="Tantosha_Cd" />
+          <ScalarProperty Name="Shiharai" ColumnName="Shiharai" />
+          <ScalarProperty Name="Yuko_Kigen" ColumnName="Yuko_Kigen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_User">
+      <EntityTypeMapping TypeName="TrialModel.M_User">
+        <MappingFragment StoreEntitySet="M_User">
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="User_Pass" ColumnName="User_Pass" />
+          <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Mitsu_B">
+      <EntityTypeMapping TypeName="TrialModel.T_Mitsu_B">
+        <MappingFragment StoreEntitySet="T_Mitsu_B">
+          <ScalarProperty Name="Mitsu_No" ColumnName="Mitsu_No" />
+          <ScalarProperty Name="Gyo_No" ColumnName="Gyo_No" />
+          <ScalarProperty Name="Shohin_Cd" ColumnName="Shohin_Cd" />
+          <ScalarProperty Name="Suryo" ColumnName="Suryo" />
+          <ScalarProperty Name="Tani" ColumnName="Tani" />
+          <ScalarProperty Name="Tanka" ColumnName="Tanka" />
+          <ScalarProperty Name="Kingaku" ColumnName="Kingaku" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Mitsu_H">
+      <EntityTypeMapping TypeName="TrialModel.T_Mitsu_H">
+        <MappingFragment StoreEntitySet="T_Mitsu_H">
+          <ScalarProperty Name="Mitsu_No" ColumnName="Mitsu_No" />
+          <ScalarProperty Name="Mitsu_Date" ColumnName="Mitsu_Date" />
+          <ScalarProperty Name="Tantosha_Cd" ColumnName="Tantosha_Cd" />
+          <ScalarProperty Name="Tokui_Cd" ColumnName="Tokui_Cd" />
+          <ScalarProperty Name="Yoken" ColumnName="Yoken" />
+          <ScalarProperty Name="Shiharai" ColumnName="Shiharai" />
+          <ScalarProperty Name="Yuko_Kigen" ColumnName="Yuko_Kigen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

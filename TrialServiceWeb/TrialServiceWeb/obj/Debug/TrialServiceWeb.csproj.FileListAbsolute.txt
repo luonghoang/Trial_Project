@@ -4,3 +4,16 @@ E:\MVC\TrialServiceWeb\TrialServiceWeb\bin\TrialServiceWeb.pdb
 E:\MVC\TrialServiceWeb\TrialServiceWeb\obj\Debug\TrialServiceWeb.csprojResolveAssemblyReference.cache
 E:\MVC\TrialServiceWeb\TrialServiceWeb\obj\Debug\TrialServiceWeb.dll
 E:\MVC\TrialServiceWeb\TrialServiceWeb\obj\Debug\TrialServiceWeb.pdb
+E:\Git\Trial_Project\TrialServiceWeb\TrialServiceWeb\bin\TrialServiceWeb.dll.config
+E:\Git\Trial_Project\TrialServiceWeb\TrialServiceWeb\bin\TrialServiceWeb.dll
+E:\Git\Trial_Project\TrialServiceWeb\TrialServiceWeb\bin\TrialServiceWeb.pdb
+E:\Git\Trial_Project\TrialServiceWeb\TrialServiceWeb\bin\Contract.dll
+E:\Git\Trial_Project\TrialServiceWeb\TrialServiceWeb\bin\EntityFramework.dll
+E:\Git\Trial_Project\TrialServiceWeb\TrialServiceWeb\bin\EntityFramework.SqlServer.dll
+E:\Git\Trial_Project\TrialServiceWeb\TrialServiceWeb\bin\EntityFramework.xml
+E:\Git\Trial_Project\TrialServiceWeb\TrialServiceWeb\bin\EntityFramework.SqlServer.xml
+E:\Git\Trial_Project\TrialServiceWeb\TrialServiceWeb\obj\Debug\TrialServiceWeb.csprojResolveAssemblyReference.cache
+E:\Git\Trial_Project\TrialServiceWeb\TrialServiceWeb\obj\Debug\TrialServiceWeb.dll
+E:\Git\Trial_Project\TrialServiceWeb\TrialServiceWeb\obj\Debug\TrialServiceWeb.pdb
+E:\Git\Trial_Project\TrialServiceWeb\TrialServiceWeb\bin\TrialData.dll
+E:\Git\Trial_Project\TrialServiceWeb\TrialServiceWeb\bin\TrialData.pdb

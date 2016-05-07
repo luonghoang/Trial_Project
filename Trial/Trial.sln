@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trial", "Trial\Trial.csproj", "{966AE733-0C62-4FCD-A3B8-807ED6E38837}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{7B36462A-5D22-490C-BFB5-B8786485366E}"
+	ProjectSection(SolutionItems) = preProject
+		Libraries\Contract.dll = Libraries\Contract.dll
+		Libraries\SoftwareIsHardwork.Core.dll = Libraries\SoftwareIsHardwork.Core.dll
+		Libraries\SoftwareIsHardwork.DataSourceFascade.dll = Libraries\SoftwareIsHardwork.DataSourceFascade.dll
+		Libraries\SoftwareIsHardwork.ServiceModelClient.dll = Libraries\SoftwareIsHardwork.ServiceModelClient.dll
+		Libraries\SoftwareIsHardwork.TestingExtensions.dll = Libraries\SoftwareIsHardwork.TestingExtensions.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{966AE733-0C62-4FCD-A3B8-807ED6E38837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{966AE733-0C62-4FCD-A3B8-807ED6E38837}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{966AE733-0C62-4FCD-A3B8-807ED6E38837}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{966AE733-0C62-4FCD-A3B8-807ED6E38837}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

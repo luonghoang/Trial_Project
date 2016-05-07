@@ -1,0 +1,11 @@
+E:\Git\Trial_Project\TrialServiceWeb\TrialData\obj\Debug\TrialData.csprojResolveAssemblyReference.cache
+E:\Git\Trial_Project\TrialServiceWeb\TrialData\bin\Debug\TrialData.dll.config
+E:\Git\Trial_Project\TrialServiceWeb\TrialData\bin\Debug\TrialData.dll
+E:\Git\Trial_Project\TrialServiceWeb\TrialData\bin\Debug\TrialData.pdb
+E:\Git\Trial_Project\TrialServiceWeb\TrialData\bin\Debug\Contract.dll
+E:\Git\Trial_Project\TrialServiceWeb\TrialData\bin\Debug\EntityFramework.dll
+E:\Git\Trial_Project\TrialServiceWeb\TrialData\bin\Debug\EntityFramework.SqlServer.dll
+E:\Git\Trial_Project\TrialServiceWeb\TrialData\bin\Debug\EntityFramework.xml
+E:\Git\Trial_Project\TrialServiceWeb\TrialData\bin\Debug\EntityFramework.SqlServer.xml
+E:\Git\Trial_Project\TrialServiceWeb\TrialData\obj\Debug\TrialData.dll
+E:\Git\Trial_Project\TrialServiceWeb\TrialData\obj\Debug\TrialData.pdb

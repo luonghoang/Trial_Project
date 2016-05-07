@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TrialModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="M_Meisho">
+    <Key>
+      <PropertyRef Name="Meisho_Kbn" />
+      <PropertyRef Name="Meisho_Cd" />
+    </Key>
+    <Property Name="Meisho_Kbn" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Meisho_Cd" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="Meisho" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="M_Shohin">
+    <Key>
+      <PropertyRef Name="Shohin_Cd" />
+    </Key>
+    <Property Name="Shohin_Cd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shohin_Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tani" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="Tanka" Type="Decimal" Precision="8" Scale="2" />
+  </EntityType>
+  <EntityType Name="M_Tokui">
+    <Key>
+      <PropertyRef Name="Tokui_Cd" />
+    </Key>
+    <Property Name="Tokui_Cd" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tokui_Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tantosha_Cd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Shiharai" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Yuko_Kigen" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="M_User">
+    <Key>
+      <PropertyRef Name="User_Id" />
+    </Key>
+    <Property Name="User_Id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="User_Pass" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="User_Name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Mitsu_B">
+    <Key>
+      <PropertyRef Name="Mitsu_No" />
+      <PropertyRef Name="Gyo_No" />
+    </Key>
+    <Property Name="Mitsu_No" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="Gyo_No" Type="Decimal" Precision="1" Scale="0" Nullable="false" />
+    <Property Name="Shohin_Cd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Suryo" Type="Decimal" Precision="6" Scale="0" />
+    <Property Name="Tani" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="Tanka" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="Kingaku" Type="Decimal" Precision="7" Scale="0" />
+    <NavigationProperty Name="T_Mitsu_H" Relationship="Self.FK_T_Mitsu_B_T_Mitsu_H" FromRole="T_Mitsu_B" ToRole="T_Mitsu_H" />
+  </EntityType>
+  <EntityType Name="T_Mitsu_H">
+    <Key>
+      <PropertyRef Name="Mitsu_No" />
+    </Key>
+    <Property Name="Mitsu_No" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="Mitsu_Date" Type="Decimal" Precision="8" Scale="0" Nullable="false" />
+    <Property Name="Tantosha_Cd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tokui_Cd" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Yoken" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Shiharai" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Yuko_Kigen" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="T_Mitsu_B" Relationship="Self.FK_T_Mitsu_B_T_Mitsu_H" FromRole="T_Mitsu_H" ToRole="T_Mitsu_B" />
+  </EntityType>
+  <Association Name="FK_T_Mitsu_B_T_Mitsu_H">
+    <End Role="T_Mitsu_H" Type="Self.T_Mitsu_H" Multiplicity="1" />
+    <End Role="T_Mitsu_B" Type="Self.T_Mitsu_B" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Mitsu_H">
+        <PropertyRef Name="Mitsu_No" />
+      </Principal>
+      <Dependent Role="T_Mitsu_B">
+        <PropertyRef Name="Mitsu_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TrialEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="M_Meisho" EntityType="Self.M_Meisho" />
+    <EntitySet Name="M_Shohin" EntityType="Self.M_Shohin" />
+    <EntitySet Name="M_Tokui" EntityType="Self.M_Tokui" />
+    <EntitySet Name="M_User" EntityType="Self.M_User" />
+    <EntitySet Name="T_Mitsu_B" EntityType="Self.T_Mitsu_B" />
+    <EntitySet Name="T_Mitsu_H" EntityType="Self.T_Mitsu_H" />
+    <AssociationSet Name="FK_T_Mitsu_B_T_Mitsu_H" Association="Self.FK_T_Mitsu_B_T_Mitsu_H">
+      <End Role="T_Mitsu_H" EntitySet="T_Mitsu_H" />
+      <End Role="T_Mitsu_B" EntitySet="T_Mitsu_B" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

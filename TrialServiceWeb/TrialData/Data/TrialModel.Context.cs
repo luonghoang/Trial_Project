@@ -12,19 +12,19 @@ namespace TrialData.Data
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+
     public partial class TrialEntities : DbContext
     {
         public TrialEntities()
             : base("name=TrialEntities")
         {
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
         public virtual DbSet<M_Meisho> M_Meisho { get; set; }
         public virtual DbSet<M_Shohin> M_Shohin { get; set; }
         public virtual DbSet<M_Tokui> M_Tokui { get; set; }
