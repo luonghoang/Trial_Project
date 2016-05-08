@@ -2,54 +2,47 @@
 
 @{
     ViewBag.Title = "Log in";
+    //Layout = "";
 }
-
-<h2>@ViewBag.Title.</h2>
-<div class="row">
-    <div class="col-md-8">
+<link href="~/Content/login.css" rel="stylesheet" />
+<div class="row" style="margin:0 auto">
+    <div class=" brg_login">
         <section id="loginForm">
+            <div class="padding_header">
+                <h2 class="center brg_box header">トライアルシステム</h2>
+            </div>
+
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
                 @Html.AntiForgeryToken()
-                <h4>Use a local account to log in.</h4>
-                <hr />
-                @Html.ValidationSummary(true)
-                <div class="form-group">
-                    @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.UserName)
+
+              <br />
+                <div class="brg_box content">
+                    @Html.ValidationSummary(true)
+                    <div class="form-group ">
+                        <div>
+                            @Html.LabelFor(m => m.UserName, new { @class = " control-label" })
+                        </div>
+
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", id = "txt_user_id" })
+                            @Html.ValidationMessageFor(m => m.UserName)
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Password)
+                    <div class="form-group ">
+                        @Html.LabelFor(m => m.Password, new { @class = "control-label" })
+                        <div class="col-md-12">
+                            @Html.PasswordFor(m => m.Password, new { @class = "col-md-10 form-control", id = "txt_user_pass" })
+                            @Html.ValidationMessageFor(m => m.Password)
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <div class="checkbox">
-                            @Html.CheckBoxFor(m => m.RememberMe)
-                            @Html.LabelFor(m => m.RememberMe)
+                    <div class="form-group">
+                        <div class="">
+                            <input type="submit" value="ログイン" class="btn" id="btn_login" />
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Log in" class="btn btn-default" />
-                    </div>
-                </div>
-                <p>
-                    @Html.ActionLink("Register", "Register") if you don't have a local account.
-                </p>
             }
-        </section>
-    </div>
-    <div class="col-md-4">
-        <section id="socialLoginForm">
-            @Html.Partial("_ExternalLoginsListPartial", new { Action = "ExternalLogin", ReturnUrl = ViewBag.ReturnUrl })
         </section>
     </div>
 </div>
