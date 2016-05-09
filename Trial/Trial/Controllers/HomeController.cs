@@ -36,6 +36,13 @@ namespace Trial.Controllers
                 return _providers;
             }
         }
+        public void Init()
+        {
+            if (Session["Token"] == null)
+            {
+                RedirectToAction("Login", "Account");
+            }
+        }
     }
     public class HomeController : BaseController
     {

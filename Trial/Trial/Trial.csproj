@@ -175,7 +175,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\EstimationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -190,6 +193,10 @@
     <Compile Include="Provider\ProviderBase.cs" />
     <Compile Include="Provider\UserProvider.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Ultils\EncryptData.cs" />
+    <Compile Include="Ultils\LinkInfo.cs" />
+    <Compile Include="Ultils\MethodExt.cs" />
+    <Compile Include="Ultils\UserLogin.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -233,7 +240,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="NewFolder1\" />
+    <Folder Include="Views\Error\" />
+    <Folder Include="Views\Estimation\" />
+    <Folder Include="Views\Menu\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

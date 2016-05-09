@@ -9,11 +9,15 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using Trial.Models;
+using System.Text;
+using System.Security.Cryptography;
+using Trial.Ultils;
+using Contract.Account.Record;
 
 namespace Trial.Controllers
 {
     [Authorize]
-    public class AccountController : Controller
+    public class AccountController : BaseController
     {
 
      
@@ -34,26 +38,44 @@ namespace Trial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid )
             {
-                //var user = await UserManager.FindAsync(model.UserName, model.Password);
-                //if (user != null)
-               // {
-                   // await SignInAsync(user, model.RememberMe);
-                  //  return RedirectToLocal(returnUrl);
-               // }
-              //  else
-             //   {
-                   ModelState.AddModelError("", "Invalid username or password.");
-               // }
-            }
+                UserRecord user = Providers.User.GetAccount(model.UserName, model.Password);
+                if (user != null)
+                {
+                    string token = CreateRandomCode();
 
+                    //TO DO: Find user by user name, user id.
+                    UserLogin.SetCookies(user.User_Id, HttpContext.Response, true);
+
+                    // TO DO: Add token cookies
+                    HttpCookie tokenCookie = new HttpCookie("Token", token);
+                    tokenCookie.Expires = DateTime.Now.AddDays(1d);
+                    Response.Cookies.Add(tokenCookie);
+
+                    //TO DO: Add session
+                    Session["User"] = user;
+                    Session["Token"] = token;
+                    Session["UserID"] = user.User_Id;
+                    Session["UserName"] = user.User_Name;
+
+                    return RedirectToAction("Index", "Menu");
+                }
+            }
             // If we got this far, something failed, redisplay form
             return View(model);
         }
 
-      
-
+        private UserRecord getUserLogin(string userName, string password)
+        {
+            return Providers.User.GetAccount(userName, password);
+        }
+        public static string CreateRandomCode()
+        {
+            Random rand = new Random(DateTime.Now.TimeOfDay.Milliseconds);
+            string currentDate = DateTime.Now.ToString("ddMMyyyyhh:mm:ss:tt")+rand.Next();
+            return EncryptData.Encryption(currentDate);
+        }
       
         [HttpPost]
         [ValidateAntiForgeryToken]
